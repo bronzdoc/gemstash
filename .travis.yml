@@ -20,7 +20,7 @@ matrix:
         - JRUBY_OPTS="--client -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -J-Xss2m -Xcompile.invokedynamic=false -J-Xmx1536m"
         - JRUBY_VERSION="jruby-9.2.0.0"
       before_install:
-        - ./ci/build/rvm_Setup.sh
+        - ./ci/build/rvm_setup.sh
         - rm ${HOME}/.rvm/gemsets/jruby/global.gems
         - rvm install rvm use ${JRUBY_VERSION} --install --binary --fuzzy
         - gem install bundler
